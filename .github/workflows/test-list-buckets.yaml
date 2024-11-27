@@ -1,7 +1,9 @@
 name: test-list-buckets
 
 on:
-  workflow_dispatch:
+  push:
+    branches:
+      - 1-amazon-bedrock-github-actions
 
 permissions:
   id-token: write
