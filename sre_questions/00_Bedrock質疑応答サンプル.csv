@@ -1,6 +1,6 @@
 SRE,,,
 No.,種別,質問,回答
-1,Terraform,Terraformにおけるstateファイルとは何ですか。,Terraformのstateファイルは、Terraformが管理するインフラストラクチャの現在の状態を記録するJSONファイルです。このファイルには、作成されたリソースの詳細情報や、Terraformの設定とリソースの実際の状態との対応関係が含まれています。stateファイルは、Terraformが以前のデプロイメントと現在の設定を比較し、必要な変更を特定するために使用されます。
+1,Terraform,Terraformにおけるstateファイルとは何ですか。,Terraformのstateファイルは、Terraformが管理するインフラストラクチャの現在の状態を記録するJSONファイルです。このファイルには、作成されたリソースの詳細情報や、Terraformの設定とリソースの実際の状態との対応関係が含まれています。stateファイルは、Terraformが以前のデプロイメントと現在の設定を比較し、必要な変更を特定するために使用されます。,
 2,,Terraformにおけるbackendとは何ですか。,
 3,,Terraformにおけるstate lockingとは何ですか。,
 4,,Terraformにおけるproviderとは何ですか。,

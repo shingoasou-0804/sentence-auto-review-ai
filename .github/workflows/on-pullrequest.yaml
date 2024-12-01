@@ -33,7 +33,7 @@ jobs:
         uses: tj-actions/changed-files@v44
         with:
           files: |
-            **.csv
+            sre_questions/**.csv
 
       - name: List all changed files
         run: echo '${{ steps.changed-files.outputs.all_changed_files }}'
@@ -47,7 +47,7 @@ jobs:
           PR_NUMBER: ${{ github.event.number }}
         run: |
           for file in ${ALL_CHANGED_FILES}; do
-            bash .github/scripts/run.sh /github/prompt/system.txt ${file}
-            response_body=`cat output.json | jq -r -c '.content[-1].text'`
+            bash .github/scripts/run.sh .github/prompt/system.txt ${file}
+            response_body=`cat outfile.json | jq -r -c '.content[-1].text'`
             gh pr comment "${PR_NUMBER}" -b "${response_body}"
           done
