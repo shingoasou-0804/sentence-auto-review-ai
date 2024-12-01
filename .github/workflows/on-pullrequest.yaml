@@ -1,7 +1,7 @@
 name: on-pullrequest
 
 on:
-  pull_request:
+  push:
     branches:
       - 3-bedrock-review
     paths:
