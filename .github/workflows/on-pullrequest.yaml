@@ -1,11 +1,11 @@
 name: on-pullrequest
 
 on:
-  pull_request:
+  push:
     branches:
       - 7-review-cost
     paths:
-      - '**.re'
+      - sre_questions/**.csv
 
 permissions:
   id-token: write
