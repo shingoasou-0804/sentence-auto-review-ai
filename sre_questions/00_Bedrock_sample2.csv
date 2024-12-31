@@ -2,3 +2,4 @@ SRE,,,
 No.,種別,質問,回答
 1,,terraform planとterraform applyコマンドの用途を教えてください。,
 2,,terraform planとterraform validateコマンドの違いについて教えてください。,terraform planコマンドはstateファイルを読み込んで、設定値と現在の状態（state）を比較し、変更のプレビューを生成します。一方、terraform validateコマンドはTerraformの設定ファイルの構文や構造のみを検証します。構文エラーや設定の不整合を検出しますが、変更のプレビューや実際の適用は行いません。 
+3,,terraform applyコマンド実行時に、対話形式で変更適用するかどうかの入力を求められますが、それをスキップしてapplyを実行するにはどうしたらいいですか。,
