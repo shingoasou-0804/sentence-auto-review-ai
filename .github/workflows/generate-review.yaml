@@ -1,7 +1,9 @@
 name: generate-review
 
 on:
-  workflow_dispatch:
+  push:
+    branches:
+      - 5-bedrock-github-actions-multifile-connection-review
 
 permissions:
   id-token: write
