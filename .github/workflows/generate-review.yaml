@@ -9,7 +9,7 @@ permissions:
   issues: write
 
 env:
-  ISSUE_NUMBER: 5
+  ISSUE_NUMBER: 6
   GH_TOKEN: ${{ github.token }}
 
 jobs:
