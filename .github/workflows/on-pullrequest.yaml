@@ -65,9 +65,9 @@ jobs:
           input_tokens=`cat outfile.json | jq -r .usage.input_tokens`
           output_tokens=`cat outfile.json | jq -r .usage.output_tokens`
 
-          input_cost=`aws "BEGIN { print (${BEDROCK_INPUT_TOKEN_PRICE} / 1000) * ${input_tokens} }"`
-          output_cost=`aws "BEGIN { print (${BEDROCK_OUTPUT_TOKEN_PRICE} / 1000) * ${output_tokens} }"`
-          total_cost=`aws "BEGIN { print ${input_cost} + ${output_cost} }"`
+          input_cost=`awk "BEGIN { print (${BEDROCK_INPUT_TOKEN_PRICE} / 1000) * ${input_tokens} }"`
+          output_cost=`awk "BEGIN { print (${BEDROCK_OUTPUT_TOKEN_PRICE} / 1000) * ${output_tokens} }"`
+          total_cost=`awk "BEGIN { print ${input_cost} + ${output_cost} }"`
 
           body=`cat .github/template.txt`
           body="${body//<BODY>/$response_body}"
